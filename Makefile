@@ -1,6 +1,7 @@
 .SUFFIXES: .1.rst .5 .7 .dia .png .pdf .html
 
 MAKE = make
+GIT = git
 # VERSION = $(shell grep __version__ ../sarracenia/sarra/__init__.py | sed -e 's/"//g' | cut -c14-)
 # DATE = $(shell date "+%B %Y")
 
@@ -15,19 +16,21 @@ all: bootstrap anchorjs index sarra sundew
 html: $(TARGETS)
 
 sarra:
-	$(MAKE) TEMPLATE=--template=../../../site/template-en.txt -C ../sarracenia/doc/html
-	cp ../sarracenia/doc/html/*.html htdocs
-	cp ../sarracenia/doc/html/*.svg htdocs
-	cp ../sarracenia/doc/*.gif htdocs
-	cp ../sarracenia/doc/html/*.jpg htdocs
+	$(GIT) clone git://git.code.sf.net/p/metpx/sarracenia sarracenia
+	$(MAKE) TEMPLATE=--template=../../site/template-en.txt -C sarracenia/doc/html
+	cp sarracenia/doc/html/*.html htdocs
+	cp sarracenia/doc/html/*.svg htdocs
+	cp sarracenia/doc/*.gif htdocs
+	cp sarracenia/doc/html/*.jpg htdocs
 
 sundew:
-	$(MAKE) TEMPLATE=--template=../../../site/template-en.txt -C ../sundew/doc/user
-	$(MAKE) TEMPLATE=--template=../../../site/template-en.txt -C ../sundew/doc/dev
-	$(MAKE) -C ../sundew/doc/html
-	cp ../sundew/doc/html/*.html htdocs
-	cp ../sundew/doc/html/*.png htdocs
-	cp ../sundew/doc/html/WMO-386.pdf htdocs
+	$(GIT) clone git://git.code.sf.net/p/metpx/sundew sundew
+	$(MAKE) TEMPLATE=--template=../../site/template-en.txt -C sundew/doc/user
+	$(MAKE) TEMPLATE=--template=../../site/template-en.txt -C sundew/doc/dev
+	$(MAKE) -C sundew/doc/html
+	cp sundew/doc/html/*.html htdocs
+	cp sundew/doc/html/*.png htdocs
+	cp sundew/doc/html/WMO-386.pdf htdocs
 
 index:
 	cp index-e.html htdocs
@@ -55,26 +58,31 @@ index:
 
 # Get twitter bootstrap 3.3.6
 bootstrap:
-	wget -q https://github.com/twbs/bootstrap/releases/download/v3.3.6/bootstrap-3.3.6-dist.zip
+	#wget -q https://github.com/twbs/bootstrap/releases/download/v3.3.6/bootstrap-3.3.6-dist.zip
+	curl -O -J -L https://github.com/twbs/bootstrap/releases/download/v3.3.6/bootstrap-3.3.6-dist.zip
 	unzip -q bootstrap-3.3.6-dist.zip
 	-mv bootstrap-3.3.6-dist/js htdocs/js
 	-mv bootstrap-3.3.6-dist/css htdocs/css
 	-mv bootstrap-3.3.6-dist/fonts htdocs/fonts
 	rm -rf bootstrap-3.3.6-dist
 	rm bootstrap-3.3.6-dist.zip
-	cp -ap css/* htdocs/css
+	#cp -ap css/* htdocs/css
+	mkdir -p htdocs/css
+	cp -p css/* htdocs/css
 
 # Get anchor.js 2.0.0
 anchorjs:	
-	wget -q https://github.com/bryanbraun/anchorjs/archive/3.2.1.tar.gz
-	tar -zxvf 3.2.1.tar.gz anchorjs-3.2.1/anchor.js
+	#wget -q https://github.com/bryanbraun/anchorjs/archive/3.2.1.tar.gz
+	curl -O -J -L https://github.com/bryanbraun/anchorjs/archive/3.2.1.tar.gz
+	tar -zxvf *3.2.1.tar.gz anchorjs-3.2.1/anchor.js
 	-mv anchorjs-3.2.1/anchor.js htdocs/js
 	rm -rf anchorjs-3.2.1
-	rm 3.2.1.tar.gz 
+	rm *3.2.1.tar.gz 
 
 css:
 	mkdir -p htdocs/css
-	cp -ap css/* ./htdocs/css
+	#cp -ap css/* ./htdocs/css
+	cp -p css/* ./htdocs/css
 
 # NOTE: In order to deploy the site to sourceforge, run the following commands:
 # 1. make all
@@ -89,7 +97,8 @@ clean:
 	rm -f htdocs/*.jpg
 	rm -f htdocs/*.gif
 	rm -f htdocs/*.html
-	$(MAKE) -C ../sarracenia/doc/html clean
-	$(MAKE) -C ../sundew/doc/html clean
-	$(MAKE) -C ../sundew/doc/user clean
-	$(MAKE) -C ../sundew/doc/dev clean
+	rmdir htdocs
+	$(MAKE) -C sarracenia/doc/html clean
+	$(MAKE) -C sundew/doc/html clean
+	$(MAKE) -C sundew/doc/user clean
+	$(MAKE) -C sundew/doc/dev clean
