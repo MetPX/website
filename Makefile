@@ -16,17 +16,22 @@ all: bootstrap anchorjs index sarra sundew
 html: $(TARGETS)
 
 sarra:
-	$(GIT) clone git://git.code.sf.net/p/metpx/sarracenia sarracenia
-	$(MAKE) TEMPLATE=--template=../../site/template-en.txt -C sarracenia/doc/html
+	@echo [ -d sarracenia ] || $(GIT) clone git://git.code.sf.net/p/metpx/sarracenia sarracenia 
+	@cd sarracenia && git pull 
+	@cd ..
+	$(MAKE) TEMPLATE=--template=../../../template-en.txt -C sarracenia/doc/html
 	cp sarracenia/doc/html/*.html htdocs
 	cp sarracenia/doc/html/*.svg htdocs
 	cp sarracenia/doc/*.gif htdocs
 	cp sarracenia/doc/html/*.jpg htdocs
 
 sundew:
-	$(GIT) clone git://git.code.sf.net/p/metpx/sundew sundew
-	$(MAKE) TEMPLATE=--template=../../site/template-en.txt -C sundew/doc/user
-	$(MAKE) TEMPLATE=--template=../../site/template-en.txt -C sundew/doc/dev
+	
+	@echo [ -d sundew ] || $(GIT) clone git://git.code.sf.net/p/metpx/sundew sundew
+	@cd sundew && git pull 
+	@cd ..
+	$(MAKE) TEMPLATE=--template=../../../template-en.txt -C sundew/doc/user
+	$(MAKE) TEMPLATE=--template=../../../template-en.txt -C sundew/doc/dev
 	$(MAKE) -C sundew/doc/html
 	cp sundew/doc/html/*.html htdocs
 	cp sundew/doc/html/*.png htdocs
@@ -97,8 +102,12 @@ clean:
 	rm -f htdocs/*.jpg
 	rm -f htdocs/*.gif
 	rm -f htdocs/*.html
-	rmdir htdocs
 	$(MAKE) -C sarracenia/doc/html clean
 	$(MAKE) -C sundew/doc/html clean
 	$(MAKE) -C sundew/doc/user clean
 	$(MAKE) -C sundew/doc/dev clean
+
+wipe: clean 
+	rm -rf htdocs
+	rm -rf sarracenia
+	rm -rf sundew

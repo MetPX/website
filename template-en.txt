@@ -1,7 +1,7 @@
 %(head_prefix)s
 %(head)s
 %(stylesheet)s
-%(body_prefix)s 
+%(body_prefix)s
 	<nav class="navbar navbar-default navbar-static-top">
 		<div class="container">
 			<div class="navbar-header">
@@ -15,17 +15,24 @@
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
-					<li><a href="sundew-e.html">Sundew</a></li>
-					<li><a href="sarra-e.html">Sarracenia</a></li>
 					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Documentation <span class="caret"></span></a>
-    					<ul class="dropdown-menu">
-        					<li><a href="sundew-docs-e.html">Sundew</a></li>
-        					<li><a href="sarra-docs-e.html">Sarracenia</a></li>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"  aria-haspopup="true" aria-expanded="false">Sundew <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="sundew-e.html">About</a></li>
+							<li><a href="sundew-docs-e.html">Documentation</a></li>
+							<li><a href="download-e.html">Download</a></li>
+							<li><a href="https://sourceforge.net/p/metpx/sundew/ci/master/tree/">Git</a></li>
 						</ul>
 					</li>
-					<li><a href="download-e.html">Downloads</a></li>
-					<li><a href="https://sourceforge.net/p/metpx/git/ci/master/tree/">Git</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"  aria-haspopup="true" aria-expanded="false">Sarracenia <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="sarra-e.html">Sarracenia</a></li>
+							<li><a href="sarra-docs-e.html">Documentation</a></li>
+							<li><a href="download-e.html">Download</a></li>
+							<li><a href="https://sourceforge.net/p/metpx/sarracenia/ci/master/tree/">Git</a></li>
+						</ul>
+					</li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="index-f.html">Français</a></li>
@@ -47,7 +54,7 @@
 	</div> <!-- container -->
 	<!-- footer -->
 	<footer class="footer">
-      <div class="container">        
+      <div class="container">
       <div class="col-sm-6">
       <p>Code licenced <a href="http://sourceforge.net/p/metpx/git/ci/master/tree/COPYING">GPLv2</a></p>
       <p class="text-muted">
