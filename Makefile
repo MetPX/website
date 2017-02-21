@@ -13,55 +13,61 @@ GIT = git
 # all: bootstrap anchorjs svg img index $(TARGETS)
 all: dirs bootstrap anchorjs index sarra sundew
 
+UMASK=022
+
 html: $(TARGETS)
 
 dirs:
-	mkdir -p htdocs/css
-	mkdir -p htdocs/fonts
-	mkdir -p htdocs/js
+	umask $(UMASK) && mkdir -p htdocs/css
+	umask $(UMASK) && mkdir -p htdocs/fonts
+	umask $(UMASK) && mkdir -p htdocs/js
 
 sarra:
 	[ -d sarracenia ] || $(GIT) clone git://git.code.sf.net/p/metpx/sarracenia sarracenia
-	@cd sarracenia && git pull
+	@cd sarracenia && umask $(UMASK) && git pull
 	@cd ..
-	$(MAKE) TEMPLATE=--template=../../../template-en.txt -C sarracenia/doc/html
-	cp sarracenia/doc/html/*.html htdocs
+	umask $(UMASK) && $(MAKE) TEMPLATE=--template=../../../template-en.txt -C sarracenia/doc/html
+	umask $(UMASK) && cp sarracenia/doc/html/*.html htdocs
 	-cp sarracenia/doc/html/*.svg htdocs
 	-cp sarracenia/doc/*.gif htdocs
 	-cp sarracenia/doc/html/*.jpg htdocs
+	-chmod go+r htdocs/*
 
 sundew:
 	[ -d sundew ] || $(GIT) clone git://git.code.sf.net/p/metpx/sundew sundew
 	@cd sundew && git pull
 	@cd ..
-	$(MAKE) TEMPLATE=--template=../../../template-en.txt -C sundew/doc/user
-	$(MAKE) TEMPLATE=--template=../../../template-en.txt -C sundew/doc/dev
-	$(MAKE) -C sundew/doc/html
-	cp sundew/doc/html/*.html htdocs
-	cp sundew/doc/html/*.png htdocs
-	cp sundew/doc/html/WMO-386.pdf htdocs
+	umask $(UMASK) && $(MAKE) TEMPLATE=--template=../../../template-en.txt -C sundew/doc/user
+	umask $(UMASK) && $(MAKE) TEMPLATE=--template=../../../template-en.txt -C sundew/doc/dev
+	umask $(UMASK) && $(MAKE) -C sundew/doc/html
+	umask $(UMASK) && cp sundew/doc/html/*.html htdocs
+	umask $(UMASK) && cp sundew/doc/html/*.png htdocs
+	umask $(UMASK) && cp sundew/doc/html/WMO-386.pdf htdocs
+	-chmod go+r htdocs/*
 
 index:
-	cp index-e.html htdocs
-	cp index-f.html htdocs
-	ln -s index-e.html htdocs/index.html
+	umask $(UMASK) && cp index-e.html htdocs
+	umask $(UMASK) && cp index-f.html htdocs
+	-rm htdocs/index.html
+	umask $(UMASK) && ln -s index-e.html htdocs/index.html
+	-chmod go+r htdocs/*
 
 # Get twitter bootstrap 3.3.6
 bootstrap:
 	curl -O -J -L https://github.com/twbs/bootstrap/releases/download/v3.3.6/bootstrap-3.3.6-dist.zip
 	unzip -q bootstrap-3.3.6-dist.zip
-	cp -ap bootstrap-3.3.6-dist/js/* htdocs/js
-	cp -ap bootstrap-3.3.6-dist/css/* htdocs/css
-	cp -ap bootstrap-3.3.6-dist/fonts/* htdocs/fonts
-	cp -p css/* htdocs/css
+	umask $(UMASK) && cp -ap bootstrap-3.3.6-dist/js/* htdocs/js
+	umask $(UMASK) && cp -ap bootstrap-3.3.6-dist/css/* htdocs/css
+	umask $(UMASK) && cp -ap bootstrap-3.3.6-dist/fonts/* htdocs/fonts
+	umask $(UMASK) && cp -p css/* htdocs/css
 	rm -rf bootstrap-3.3.6-dist
 	rm bootstrap-3.3.6-dist.zip
 
 # Get anchor.js 2.0.0
 anchorjs:
-	curl -O -J -L https://github.com/bryanbraun/anchorjs/archive/3.2.1.tar.gz
-	tar -zxvf *3.2.1.tar.gz anchorjs-3.2.1/anchor.js
-	cp anchorjs-3.2.1/anchor.js htdocs/js
+	umask $(UMASK) && curl -O -J -L https://github.com/bryanbraun/anchorjs/archive/3.2.1.tar.gz
+	umask $(UMASK) && tar -zxvf *3.2.1.tar.gz anchorjs-3.2.1/anchor.js
+	umask $(UMASK) && cp anchorjs-3.2.1/anchor.js htdocs/js
 	rm -rf anchorjs-3.2.1
 	rm *3.2.1.tar.gz
 
