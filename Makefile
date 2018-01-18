@@ -31,6 +31,7 @@ sarra:
 	-cp sarracenia/doc/html/*.svg htdocs
 	-cp sarracenia/doc/*.gif htdocs
 	-cp sarracenia/doc/html/*.jpg htdocs
+	-cp sarracenia/doc/html/*.png htdocs
 	-chmod go+r htdocs/*
 
 sundew:
