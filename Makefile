@@ -23,7 +23,7 @@ dirs:
 	umask $(UMASK) && mkdir -p htdocs/js
 
 sarra:
-	[ -d sarracenia ] || $(GIT) clone git://git.code.sf.net/p/metpx/sarracenia sarracenia
+	[ -d sarracenia ] || $(GIT) clone https://github.com/MetPX/sarracenia sarracenia
 	@cd sarracenia && umask $(UMASK) && git pull
 	@cd ..
 	umask $(UMASK) && $(MAKE) TEMPLATE=--template=../../../template-en.txt -C sarracenia/doc/html
@@ -35,7 +35,7 @@ sarra:
 	-chmod go+r htdocs/*
 
 sundew:
-	[ -d sundew ] || $(GIT) clone git://git.code.sf.net/p/metpx/sundew sundew
+	[ -d sundew ] || $(GIT) clone https://github.com/MetPX/Sundew sundew
 	@cd sundew && git pull
 	@cd ..
 	umask $(UMASK) && $(MAKE) TEMPLATE=--template=../../../template-en.txt -C sundew/doc/user

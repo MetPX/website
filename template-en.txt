@@ -21,7 +21,7 @@
 							<li><a href="sundew-e.html">Overview</a></li>
 							<li><a href="sundew-docs-e.html">Documentation</a></li>
 							<li><a href="download-e.html">Download</a></li>
-							<li><a href="https://sourceforge.net/p/metpx/sundew/ci/master/tree/">Git</a></li>
+							<li><a href="https://github.com/MetPX/sarracenia">Git</a></li>
 						</ul>
 					</li>
 					<li class="dropdown">
@@ -29,10 +29,10 @@
 						<ul class="dropdown-menu">
 							<li><a href="sarra-e.html">Overview</a></li>
 							<li><a href="CHANGES.html">Release Notes</a></li>
-							<li><a href="https://sourceforge.net/p/metpx/sarracenia/ci/master/tree/doc/UPGRADING.rst">Upgrade Guide</a></li>
+							<li><a href="https://github.com/MetPX/sarracenia/blob/master/doc/UPGRADING.rst">Upgrade Guide</a></li>
 							<li><a href="sarra-docs-e.html">Documentation</a></li>
 							<li><a href="download-e.html">Download</a></li>
-							<li><a href="https://sourceforge.net/p/metpx/sarracenia/ci/master/tree/">Git</a></li>
+							<li><a href="https://github.com/MetPX/sarracenia">Git</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -58,13 +58,14 @@
 	<footer class="footer">
       <div class="container">
       <div class="col-sm-6">
-      <p>Code licenced <a href="http://sourceforge.net/p/metpx/git/ci/master/tree/COPYING">GPLv2</a></p>
+      <p>Code licenced <a href="https://github.com/MetPX/sarracenia/blob/master/LICENSE">GPLv2</a></p>
       <p class="text-muted">
         <span class="glyphicon glyphicon-copyright-mark"> </span> 2004-2011  Environment Canada<br/><span class="glyphicon glyphicon-copyright-mark"> </span> 2011-2015  Government of Canada</p>
       </div>
       <div class="col-sm-6">
         <ul class="list-inline">
           <li><a href="http://sourceforge.net/p/metpx">SourceForge</a></li>
+          <li><a href="https://github.com/MetPX/sarracenia">GitHub</a></li>
           <li><a href="about-e.html">About</a></li>
         </ul>
       </div>
