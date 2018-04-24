@@ -79,7 +79,7 @@ css:
 # 1. make all
 # 2. make SFUSER=<username> deploy
 deploy:
-	rsync -avP htdocs/ -e ssh $(SFUSER),metpx@web.sourceforge.net:htdocs/
+	rsync -avP htdocs/ -e "ssh -o IdentitiesOnly=yes $(SFUSER),metpx@web.sourceforge.net:htdocs/"
 
 clean:
 	rm -f $(TARGETS)
