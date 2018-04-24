@@ -12,8 +12,8 @@
 <li><a href="sundew-f.html">Sundew</a></li>
 <li><a href="sarra-f.html">Sarracenia</a></li>
 <li><a href="download-e.html">Downloads</a></li>
-<li><a href="http://sourceforge.net/projects/metpx/">SourceForge</a></li>
-<li><a href="sarra-f.html">English</a></li>
+<li><a href="http://github.com/MetPX/sarracenia">GitHub</a></li>
+<li><a href="sarra-e.html">English</a></li>
 </ul>
 </nav>
 </div> <!-- container -->
@@ -57,7 +57,7 @@
 						</ul>
 					</li>
 					<li><a href="#">Téléchargements</a></li>
-					<li><a href="https://sourceforge.net/p/metpx/git/ci/master/tree/">Git</a></li>
+					<li><a href="http://github.com/MetPX/sarracenia">Git</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="index-e.html">English</a></li>
@@ -81,13 +81,14 @@
 	<footer class="footer">
       <div class="container">        
       <div class="col-sm-6">
-      <p>Code licenced <a href="http://sourceforge.net/p/metpx/git/ci/master/tree/COPYING">GPLv2</a></p>
+      <p>Droits d'auteur:<a href="https://github.com/MetPX/sarracenia/blob/master/LICENSE">GPLv2</a></p>
       <p class="text-muted">
-        <span class="glyphicon glyphicon-copyright-mark"> </span> 2004-2011  Environment Canada<br/><span class="glyphicon glyphicon-copyright-mark"> </span> 2011-2015  Government du Canada</p>
+        <span class="glyphicon glyphicon-copyright-mark"> </span> 2004-2011 Environnement Canada<br/><span class="glyphicon glyphicon-copyright-mark"> </span> 2011-2018 Gouvernment du Canada</p>
       </div>
       <div class="col-sm-6">
         <ul class="list-inline">
           <li><a href="http://sourceforge.net/p/metpx">SourceForge</a></li>
+          <lI><a href="https://github.com/MetPX/sarracenia">GitHub</a></li>
           <li><a href="about-f.html">Apropos</a></li>
         </ul>
       </div>
