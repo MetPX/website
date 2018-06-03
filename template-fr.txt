@@ -56,7 +56,7 @@
         					<li><a href="http://github.com/MetPX/sarracenia/blob/master/doc/fr/sr_subscribe.1.rst#documentation">Sarracenia</a></li>
 						</ul>
 					</li>
-					<li><a href="#">Téléchargements</a></li>
+					<li><a href="https://github.com/MetPX/sarracenia/blob/master/doc/fr/Install.rst">Téléchargements</a></li>
 					<li><a href="http://github.com/MetPX/sarracenia">Git Source et suivi de probèmes</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
@@ -89,7 +89,7 @@
         <ul class="list-inline">
           <li><a href="http://sourceforge.net/p/metpx">SourceForge</a></li>
           <lI><a href="https://github.com/MetPX/sarracenia">GitHub</a></li>
-          <li><a href="about-f.html">Apropos</a></li>
+          <li><a href="https://github.com/MetPX/sarracenia/blob/master/doc/fr/about.rst">Apropos</a></li>
         </ul>
       </div>
       </div>
