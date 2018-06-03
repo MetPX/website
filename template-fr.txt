@@ -48,14 +48,20 @@
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
 					<li><a href="sundew-e.html">Sundew</a></li>
-					<li><a href="sarra-e.html">Sarracenia</a></li>
+					<li><a href="https://github.com/MetPX/sarracenia/blob/master/doc/fr/sarra.rst">Sarracenia</a></li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Documentation <span class="caret"></span></a>
     					<ul class="dropdown-menu">
         					<li><a href="sundew-docs-e.html">Sundew</a></li>
+                            <li><a href="https://github.com/MetPX/sarracenia/blob/master/doc/fr/sarra.rst">Survol</a></li>
+                            <li><a href="https://github.com/MetPX/sarracenia/blob/master/doc/fr/CHANGES.rst">Changements</a></li>
+                            <li><a href="https://github.com/MetPX/sarracenia/blob/master/doc/fr/UPGRADING.rst">Guide de Mise à Niveau</a></li>
         					<li><a href="http://github.com/MetPX/sarracenia/blob/master/doc/fr/sr_subscribe.1.rst#documentation">Sarracenia</a></li>
+                            <li><a href="https://github.com/MetPX/sarracenia/blob/master/doc/Install.html">Téléchargements</a></li>
+                            <li><a href="https://github.com/MetPX/sarracenia">Source git et suivi</a></li>
 						</ul>
 					</li>
+    
 					<li><a href="https://github.com/MetPX/sarracenia/blob/master/doc/fr/Install.rst">Téléchargements</a></li>
 					<li><a href="http://github.com/MetPX/sarracenia">Git Source et suivi de probèmes</a></li>
 				</ul>

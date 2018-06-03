@@ -27,8 +27,8 @@
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"  aria-haspopup="true" aria-expanded="false">Sarracenia <span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><a href="sarra-e.html">Overview</a></li>
-							<li><a href="CHANGES.html">Release Notes</a></li>
+							<li><a href="https://github.com/MetPX/sarracenia/blob/master/doc/sarra.rst">Overview</a></li>
+							<li><a href="https://github.com/MetPX/sarracenia/blob/master/doc/CHANGES.rst">Release Notes</a></li>
 							<li><a href="https://github.com/MetPX/sarracenia/blob/master/doc/UPGRADING.rst">Upgrade Guide</a></li>
 							<li><a href="https://github.com/MetPX/sarracenia/blob/master/doc/sr_subscribe.1.rst#documentation">Documentation</a></li>
 							<li><a href="https://github.com/MetPX/sarracenia/blob/master/doc/Install.html">Download</a></li>
