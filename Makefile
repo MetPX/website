@@ -21,13 +21,16 @@ dirs:
 	umask $(UMASK) && mkdir -p htdocs/css
 	umask $(UMASK) && mkdir -p htdocs/fonts
 	umask $(UMASK) && mkdir -p htdocs/js
+	umask $(UMASK) && mkdir -p htdocs/fr
 
 sarra:
 	[ -d sarracenia ] || $(GIT) clone https://github.com/MetPX/sarracenia sarracenia
 	@cd sarracenia && umask $(UMASK) && git pull
 	@cd ..
 	umask $(UMASK) && $(MAKE) TEMPLATE=--template=../../../template-en.txt -C sarracenia/doc/html
+	umask $(UMASK) && $(MAKE) TEMPLATE=--template=../../../../template-en.txt -C sarracenia/doc/fr/html
 	umask $(UMASK) && cp sarracenia/doc/html/*.html htdocs
+	umask $(UMASK) && cp sarracenia/doc/fr/html/*.html htdocs/fr
 	-cp sarracenia/doc/html/*.svg htdocs
 	-cp sarracenia/doc/*.gif htdocs
 	-cp sarracenia/doc/html/*.jpg htdocs
