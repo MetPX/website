@@ -30,7 +30,7 @@
 							<li><a href="sarra-e.html">Overview</a></li>
 							<li><a href="CHANGES.html">Release Notes</a></li>
 							<li><a href="https://github.com/MetPX/sarracenia/blob/master/doc/UPGRADING.rst">Upgrade Guide</a></li>
-							<li><a href="https://github.com/MetPX/sarracenia/blob/master/doc/sr_subscribe.1.html#documentation">Documentation</a></li>
+							<li><a href="https://github.com/MetPX/sarracenia/blob/master/doc/sr_subscribe.1.rst#documentation">Documentation</a></li>
 							<li><a href="Install.html">Download</a></li>
 							<li><a href="https://github.com/MetPX/sarracenia">Git Source and Issues</a></li>
 						</ul>
