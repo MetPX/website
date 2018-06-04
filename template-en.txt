@@ -18,9 +18,9 @@
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"  aria-haspopup="true" aria-expanded="false">Sundew <span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><a href="sundew-e.html">Overview</a></li>
-							<li><a href="sundew-docs-e.html">Documentation</a></li>
-							<li><a href="download-e.html">Download</a></li>
+							<li><a href="https://github.com/MetPX/Sundew/blob/doc/sundew-e.rst">Overview</a></li>
+							<li><a href="https://github.com/MetPX/Sundew/tree/doc">Documentation</a></li>
+							<li><a href="https://github.com/MetPX/Sundew">Download</a></li>
 							<li><a href="https://github.com/MetPX/Sundew">Git Source and Issues</a></li>
 						</ul>
 					</li>
