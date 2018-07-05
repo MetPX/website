@@ -1,7 +1,9 @@
 MetPX Website
 =============
 
-The MetPX website is built from the documentation in the various modules in the project. It builds using all **.rst** files found in **sarracenia/doc** as well as *some* of the **.rst** files found in **sundew/doc**.
+The MetPX website used to be built from the documentation in the various modules in the project. This tree was used to
+build using all **.rst** files found in **sarracenia/doc** as well as *some* of the **.rst** files found in **sundew/doc** and make a readable website on sourceforge.  The *web-site* today is just to expose the repositories, with readme.rst files to
+provide some guidance.  So this modules is obsolete and redundant.
 
 Building Locally
 ----------------
